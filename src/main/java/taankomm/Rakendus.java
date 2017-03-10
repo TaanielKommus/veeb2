@@ -16,6 +16,14 @@ public class Rakendus {
 
 	}
 
+	@RequestMapping("/3arvu_geomeetriline_keskmine")
+	String gk(String arv1, String arv2, String arv3){
+		if(arv1==null){return "andmed puuduvad";}
+		int a1=Integer.parseInt(arv1);
+		int a2=Integer.parseInt(arv2);
+		int a3=Integer.parseInt(arv3);
+		return arv1+" , "+arv2 +" ja "+arv3+" geomeetriline keskmine on "+Math.cbrt(a1*a2*a3);
+	}
 
 	@RequestMapping("/algus")
     String tervitusfunktsioon() {
