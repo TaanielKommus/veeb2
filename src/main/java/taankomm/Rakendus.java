@@ -12,12 +12,19 @@ public class Rakendus {
         return "Ahoi!";
     }
 
+	@RequestMapping("/tervita")
+	String tervitusfunktsioon3(String eesnimi){
+		return "Tere, "+eesnimi;
+	}
+
+    //Lisage teine tervitusfunktsioon
+	@RequestMapping("/algus2")
+    String tervitusfunktsioon2() {
+        return "Tere taas!";
+    }
+
     public static void main(String[] args) {
-		//System.getProperties().put("server.port", 4289);
+		//System.getProperties().put("server.port", 4200);
         SpringApplication.run(Rakendus.class, args);
     }
 }
-
-//scl enable rh-maven33 bash
-//mvn package
-//java -jar target/boot3-1.0-SNAPSHOT.jar
