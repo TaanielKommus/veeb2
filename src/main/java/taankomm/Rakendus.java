@@ -22,7 +22,7 @@ public class Rakendus {
 		int a1=Integer.parseInt(arv1);
 		int a2=Integer.parseInt(arv2);
 		int a3=Integer.parseInt(arv3);
-		return arv1+" , "+arv2 +" ja "+arv3+" geomeetriline keskmine on "+Math.cbrt(a1*a2*a3);
+		return arv1+" , "+arv2 +" ja "+arv3+" geomeetriline keskmine on "+Math.pow((a1*a2*a3), 1/3);
 	}
 
 	@RequestMapping("/algus")
