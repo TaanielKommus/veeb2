@@ -31,9 +31,9 @@ public class Rakendus {
 		int a1=Integer.parseInt(hind);
 		int a2=Integer.parseInt(kogus);
 	 	if(klient!=null){
-			return "Kliendina on hind: " (a1*a2)-((a1*a2)*0.1);
+			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*01));
 		} else{
-			return "Klienikaarti ei ole, hind on: "(a1*a2);
+			return "Klienikaarti ei ole, hind on: "+(a1*a2);
 		}
 
 	@RequestMapping("/algus")
