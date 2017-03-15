@@ -30,10 +30,10 @@ public class Rakendus {
 		if(kogus==null){return "ostukorv on tyhi";}
 		int a1=Integer.parseInt(hind);
 		int a2=Integer.parseInt(kogus);
-	 	if(!klient.equals(null){
-			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*0.1));
-		} else{
+	 	if(klient==null){
 			return "Klienikaarti ei ole, hind on: "+(a1*a2);
+		} else{
+			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*0.1));
 		}
 	}
 
