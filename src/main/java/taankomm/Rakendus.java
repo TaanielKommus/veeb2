@@ -31,7 +31,7 @@ public class Rakendus {
 		int a1=Integer.parseInt(hind);
 		int a2=Integer.parseInt(kogus);
 	 	if(klient!=null){
-			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*01));
+			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*0.1));
 		} else{
 			return "Klienikaarti ei ole, hind on: "+(a1*a2);
 		}
@@ -56,4 +56,5 @@ public class Rakendus {
 		//System.getProperties().put("server.port", 4200);
         SpringApplication.run(Rakendus.class, args);
     }
+	}
 }
