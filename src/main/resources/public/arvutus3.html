@@ -9,7 +9,10 @@
     var a1=document.getElementById("kast1").value;
     var a2=document.getElementById("kast2").value;
     var a3=document.getElementById("kast3").value;
-    var aadress="/hinnakalkulaator?hind="+a1+"&kogus="+a2+"&klient="+a3;
+    var aadress="/hinnakalkulaator?hind="+a1+"&kogus="+a2;
+    if(document.getElementById("kast3").checked){
+      aadress+="&klient=jah"
+    }
     yhendus.open("GET", aadress, true);
     yhendus.send();
   }
@@ -22,8 +25,7 @@
   <body>
     <input type="number" id="kast1">
     <input type="number" id="kast2">
-    <input type="text" id="kast3">
-    <input type="checkbox" id="kast4" checked>
+    <input type="checkbox" id="kast3">
     <input type="button" value="Arvuta hind" onclick="arvutamine()">
     <div id="vastus">Vastuse koht</div>
   </body>

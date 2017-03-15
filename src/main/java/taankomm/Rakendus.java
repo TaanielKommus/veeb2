@@ -12,9 +12,7 @@ public class Rakendus {
 		if(arv1==null){return "andmed puuduvad";}
 		int a1=Integer.parseInt(arv1);
 		int a2=Integer.parseInt(arv2);
-		double tulemus=Math.sqrt(a1*a2);
-		if(ymardus!=null){tulemus=Math.round(tulemus);}
-		return arv1+" ja " +arv2 + " geomeetriline keskmine on "+tulemus;
+		return arv1+" ja "+arv2 +" geomeetriline keskmine on "+Math.sqrt(a1*a2);
 
 	}
 
@@ -32,10 +30,10 @@ public class Rakendus {
 		if(kogus==null){return "ostukorv on tyhi";}
 		int a1=Integer.parseInt(hind);
 		int a2=Integer.parseInt(kogus);
-	 	if(klient==null){
-			return "Klienikaarti ei ole, hind on: "+(a1*a2);
-		} else{
+	 	if(klient!=null){
 			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*0.1));
+		} else{
+			return "Klienikaarti ei ole, hind on: "+(a1*a2);
 		}
 	}
 
