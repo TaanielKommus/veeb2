@@ -12,7 +12,9 @@ public class Rakendus {
 		if(arv1==null){return "andmed puuduvad";}
 		int a1=Integer.parseInt(arv1);
 		int a2=Integer.parseInt(arv2);
-		return arv1+" ja "+arv2 +" geomeetriline keskmine on "+Math.sqrt(a1*a2);
+		double tulemus=Math.sqrt(a1*a2);
+		if(ymardus!=null){tulemus=Math.round(tulemus);}
+		return arv1+" ja " +arv2 + " geomeetriline keskmine on "+tulemus;
 
 	}
 
