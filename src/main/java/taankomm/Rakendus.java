@@ -25,7 +25,7 @@ public class Rakendus {
 		return arv1+" , "+arv2+" ja "+arv3+" geomeetriline keskmine on "+Math.cbrt(a1*a2*a3);
 	}
 
-	@RequestMapping("hinnakalkulaator")
+	/*@RequestMapping("hinnakalkulaator")
 	String hk(String hind, String kogus, String klient){
 		if(kogus==null){return "ostukorv on tyhi";}
 		int a1=Integer.parseInt(hind);
@@ -34,7 +34,7 @@ public class Rakendus {
 			return "Kliendina on hind: " +((a1*a2)-((a1*a2)*0.1));
 		} else{
 			return "Klienikaarti ei ole, hind on: "+(a1*a2);
-		}
+		}*/
 
 	@RequestMapping("/algus")
     String tervitusfunktsioon() {
@@ -57,4 +57,3 @@ public class Rakendus {
         SpringApplication.run(Rakendus.class, args);
     }
 	}
-}
