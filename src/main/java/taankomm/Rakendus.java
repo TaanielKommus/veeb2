@@ -27,7 +27,7 @@ public class Rakendus {
 
 	@RequestMapping("hinnakalkulaator")
 	String hk(String hind, String kogus, String klient){
-		if(kogus==null){return "ostukorv on tyhi";}
+		if(kogus==null){return "Ostukorv on tyhi";}
 		int a1=Integer.parseInt(hind);
 		int a2=Integer.parseInt(kogus);
 	 	if(klient!=null){
@@ -38,7 +38,7 @@ public class Rakendus {
 		if(klient!=null && 2 < a2){
 			return "Ostes rohkem kui 2 eset lisandub soodustus -10%. Kliendina (lisandub soodustus -10%) on summa: " +((a1*a2)-((a1*a2)*0.2))+" eurot.";
 		}
-		else if(2 < a2){
+		if(2 < a2){
 			return "Klienikaarti ei ole! Ostes rohkem kui 2 eset lisandub soodustus -10%. Summa: "+((a1*a2)-((a1*a2)*0.1))+" eurot.";
 		}
 	}
