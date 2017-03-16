@@ -35,9 +35,9 @@ public class Rakendus {
 		} else{
 			return "Klienikaarti ei ole! Summa: "+(a1*a2)+" eurot.";
 		}
-		if(klient!=null & kogus>2){
+		if(klient!=null & kogus>=3){
 			return "Ostes rohkem kui 2 eset lisandub soodustus -10%. Kliendina (lisandub soodustus -10%) on summa: " +((a1*a2)-((a1*a2)*0.2))+" eurot.";
-		} else if(kogus>2){
+		} else if(kogus>=3){
 			return "Klienikaarti ei ole! Ostes rohkem kui 2 eset lisandub soodustus -10%. Summa: "+((a1*a2)-((a1*a2)*0.1))+" eurot.";
 		}
 	}
