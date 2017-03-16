@@ -30,16 +30,15 @@ public class Rakendus {
 		if(kogus==null){return "Ostukorv on tyhi";}
 		int a1=Integer.parseInt(hind);
 		int a2=Integer.parseInt(kogus);
-	 	if(klient!=null){
-			return "Kliendina lisandub soodustus -10%. Summa: " +((a1*a2)-((a1*a2)*0.1))+ " eurot.";
-		} else{
-			return "Klienikaarti ei ole! Summa: "+(a1*a2)+" eurot.";
-		}
 		if(klient!=null && 2 < a2){
 			return "Ostes rohkem kui 2 eset lisandub soodustus -10%. Kliendina (lisandub soodustus -10%) on summa: " +((a1*a2)-((a1*a2)*0.2))+" eurot.";
 		}
-		if(2 < a2){
+		else if(2 < a2){
 			return "Klienikaarti ei ole! Ostes rohkem kui 2 eset lisandub soodustus -10%. Summa: "+((a1*a2)-((a1*a2)*0.1))+" eurot.";
+		} else if(klient!=null){
+			return "Kliendina lisandub soodustus -10%. Summa: " +((a1*a2)-((a1*a2)*0.1))+ " eurot.";
+		} else{
+			return "Klienikaarti ei ole! Summa: "+(a1*a2)+" eurot.";
 		}
 	}
 
