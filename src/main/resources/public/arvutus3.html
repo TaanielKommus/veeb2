@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-  <title>Arvutamine2</title>
+  <title>Hinnakalkulaator</title>
   <script>
   var yhendus=new XMLHttpRequest();
   yhendus.onreadystatechange=andmedSaabusid;
@@ -23,10 +23,16 @@
 </head>
 
   <body>
-    <input type="number" id="kast1">
-    <input type="number" id="kast2">
-    <input type="checkbox" id="kast3">
+    <h3>Hinnakalkulaator</h3>
+    <p>
+      Sisesta eseme hind ja kogus ning saad vastuseks makstava summa.<br>
+      Kliendina lisandub soodustus -10%.<br>
+      Ostes rohkem kui 2 eset lisandub kogu summale soodustus -10%.
+    </p>
+    Hind: <input type="number" id="kast1">
+    Kogus: <input type="number" id="kast2">
+    Klient? <input type="checkbox" id="kast3"><br><br>
     <input type="button" value="Arvuta hind" onclick="arvutamine()">
-    <div id="vastus">Vastuse koht</div>
+    <div id="vastus">...</div>
   </body>
 </html>
